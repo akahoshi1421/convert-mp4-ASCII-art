@@ -3,10 +3,13 @@ def split(path):
     import shutil
     import cv2
 
-    shutil.rmtree("AA_resource")
+    try:
+        shutil.rmtree("AA_resource")
+        shutil.rmtree("AA_resource2")
+    except:
+        pass
+    
     os.makedirs("AA_resource")
-
-    shutil.rmtree("AA_resource2")
     os.makedirs("AA_resource2")
 
     cap = cv2.VideoCapture(path)
