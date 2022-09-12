@@ -1,4 +1,3 @@
-from logging import exception
 from toAAImg import toImg
 from splitVideo import split
 from tomp4 import mp4Generate
@@ -6,7 +5,7 @@ import sys
 import glob
 
 if len(sys.argv) != 3:
-    raise exception("\"python main.py 挿入ファイル名 書き出しファイル名\"と入力してください")
+    raise Exception("\"python main.py 挿入ファイル名 書き出しファイル名\"と入力してください")
 
 print("動画分割中...")
 frameRate = split(sys.argv[1])

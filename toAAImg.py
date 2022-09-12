@@ -1,6 +1,6 @@
 def toImg(path, i):
     from convertaa import doConvert
-    from PIL import Image, ImageFont, ImageDraw
+    from PIL import Image, ImageDraw
 
     file = path
 
@@ -8,9 +8,6 @@ def toImg(path, i):
 
     img = Image.new("L", (x, y))
 
-    SIZE = 25
-    FONT_PATH = r"C:\Windows\Fonts\arial.ttf"
-    FONT = ImageFont.truetype(FONT_PATH, SIZE)
     draw_text = ImageDraw.Draw(img)
 
     oneLine = ""
